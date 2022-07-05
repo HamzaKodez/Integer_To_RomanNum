@@ -1,0 +1,16 @@
+def int_to_roman(x):
+    numbers = [1,4,5,9,10,40,50,90,100,400,500,900,1000]
+    roman = ['I','IV','V','IX','X','XL','L', 'XC', 'C', 'CD', 'D','CM','M']
+    i = 12
+    rom_num = ' '
+    while x != 0:
+        if numbers[i] <= x:
+            rom_num += roman[i]
+            x = x - numbers[i]
+        else:
+            i -= 1 # i = i - 1
+            
+    return rom_num
+
+x = int(input("What number would you like to convert to Roman Numerals? "))
+print(int_to_roman(x))
